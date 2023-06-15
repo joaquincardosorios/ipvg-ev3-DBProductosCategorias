@@ -1,0 +1,28 @@
+﻿<div class="py-3">
+    <div class="d-flex pb-4">
+        <div class="ms-auto">
+            <a class="btn btn-primary p-2" href="@Url.Action("Create", "Producto")">Crear Producto</a>
+        </div>
+    </div>
+    <table class="table table-sm">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Producto</th>
+                <th>Precio</th>
+                <th>Categoria</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var producto in Model)
+            {
+                <tr>
+                    <td>@producto.Id</td>
+                    <td>@producto.Nombre</td>
+                    <td>$ @producto.Precio</td>
+                    <td>@producto.Categoria.Nombre</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

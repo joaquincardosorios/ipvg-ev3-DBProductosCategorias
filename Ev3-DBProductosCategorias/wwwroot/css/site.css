@@ -1,0 +1,16 @@
+
+.validation-summary-errors {
+    background-color: #f8d7da;
+    color: #721c24;
+    padding: 3px;
+    border-radius: 4px;
+    margin: 10px;
+}
+
+.field-validation-error {
+    color: #721c24;
+}
+
+.input-validation-error {
+    border: 1px solid #dc3545 !important;
+}

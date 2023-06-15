@@ -1,0 +1,25 @@
+﻿<div class="py-3">
+    <div class="d-flex pb-4">
+        <div class="ms-auto">
+            <a class="btn btn-primary p-2" href="@Url.Action("Create", "Categoria")">Crear Categoría</a>
+        </div>
+    </div>
+    <table class="table table-sm">
+        <thead>
+            <tr>
+                <th>Categoría</th>
+                <th>Productos Asociados</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var categoria in Model)
+            {
+                <tr>
+                    <td>@categoria.Nombre</td>
+                    <td>@(categoria.Productos != null ? categoria.Productos.Count : 0)</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
