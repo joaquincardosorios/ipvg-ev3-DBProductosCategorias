@@ -1,7 +1,7 @@
 ﻿@model Producto
 
 <div class="d-flex justify-content-center align-items-center py-4">
-    <div class="card">
+    <div class="card w-50">
         <div class="card-header">
             <h5 class="card-title">Crear Producto</h5>
         </div>
@@ -12,7 +12,7 @@
                 @Html.TextBoxFor(m => m.Nombre, new { @class = "form-control" })
                 @Html.LabelFor(l => l.Precio, new { @class = "form-label" })
                 @Html.TextBoxFor(m => m.Precio, new { @class = "form-control" })
-                @Html.LabelFor(l => l.CategoriaId, new { @class = "form-label" })
+                @Html.LabelFor(l => l.CategoriaId,"Categoria", new { @class = "form-label" })
                 @Html.DropDownListFor(m => m.CategoriaId, new SelectList(ViewBag.Categorias, "Id", "Nombre"), "-- Seleccione una categoría --", new { @class = "form-select" })
                 @Html.ValidationSummary()
                 <br />

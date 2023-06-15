@@ -4,22 +4,24 @@
             <a class="btn btn-primary p-2" href="@Url.Action("Create", "Categoria")">Crear Categoría</a>
         </div>
     </div>
-    <table class="table table-sm">
-        <thead>
-            <tr>
-                <th>Categoría</th>
-                <th>Productos Asociados</th>
-            </tr>
-        </thead>
-        <tbody>
-            @foreach (var categoria in Model)
-            {
+    <div class="d-flex justify-content-center">
+        <table class="table table-sm w-50">
+            <thead>
                 <tr>
-                    <td>@categoria.Nombre</td>
-                    <td>@(categoria.Productos != null ? categoria.Productos.Count : 0)</td>
+                    <th class="w-75"><strong>Categoría</strong></th>
+                    <th class="text-center"><strong>Productos Asociados</strong></th>
                 </tr>
-            }
-        </tbody>
-    </table>
+            </thead>
+            <tbody>
+                @foreach (var categoria in Model)
+                {
+                    <tr>
+                        <td>@categoria.Nombre</td>
+                        <td class="text-center">@(categoria.Productos != null ? categoria.Productos.Count : 0)</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
 </div>
 
