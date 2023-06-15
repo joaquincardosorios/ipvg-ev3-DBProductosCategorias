@@ -6,7 +6,8 @@ namespace Ev3_DBProductosCategorias.Models
 	{
 		public int Id { get; set; }
         [Required(ErrorMessage = "El nombre de la categoria es obligatoria")]
-		[MaxLength(50, ErrorMessage = "El maximo son 50 caracteres")]
+        [MinLength(2, ErrorMessage = "El minimo son 2 caracteres")]
+        [MaxLength(50, ErrorMessage = "El maximo son 50 caracteres")]
 		public string Nombre { get; set; }
 
 		public ICollection<Producto>? Productos { get; set; }

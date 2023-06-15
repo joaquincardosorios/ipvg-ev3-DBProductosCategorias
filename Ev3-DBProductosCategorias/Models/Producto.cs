@@ -7,8 +7,8 @@ namespace Ev3_DBProductosCategorias.Models
 	public class Producto
 	{
 		public int Id { get; set; }
-		[MaxLength(100, ErrorMessage ="El valor maximo de caracteres de 100")]
-		[MinLength(2, ErrorMessage = "El valor minimo de caracteres de 2")]
+		[MaxLength(100, ErrorMessage ="El valor maximo son caracteres de 100")]
+		[MinLength(2, ErrorMessage = "El valor minimo son caracteres de 2")]
         [Required(ErrorMessage = "El nombre del producto es obligatorio")]
         public string Nombre { get; set; }
 		[Column(TypeName = "decimal(18,2)")]
